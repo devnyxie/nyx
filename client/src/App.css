@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #222;
+  background-color: #1a1a1a !important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ccc !important;
+  }
+}
+
+.backdrop-blur {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.border-custom {
+  border: 1px solid #64656d;
+}
+
+.border-custom-bottom {
+  border-bottom: 1px solid #64656d;
+}
+
+.border-custom-top {
+  border-top: 1px solid #64656d;
+}
+
+.visible-bg {
+  background-color: rgb(13, 17, 23, 0.5);
+}
+
+.rounded {
+  border-radius: 5px !important;
+}
+
+/*MD-*/
+
+@media screen and (min-width: 768px) {
+  .main {
+    border-radius: 5px;
+    border: 1px solid #64656d;
+  }
+}
+
+* {
+  transition:
+    width 0.25s,
+    height 0.25s;
+}
+
+th,
+td,
+thead {
+  border-width: 1px !important;
+  border-color: rgba(255, 255, 255, 0.178) !important;
+  border-style: solid !important;
+  padding: 5px;
+}
