@@ -72,7 +72,7 @@ function Header({ theme, setTheme }) {
         </div>
       </div>
 
-      <nav class="navbar navbar-expand-lg w-100 d-block d-md-none px-4">
+      <nav class="navbar navbar-expand-lg w-100 d-block d-md-none px-4 border-custom-bottom">
         <div class="container-fluid d-flex justify-content-between">
           <div
             style={{ fontSize: '19px' }}
