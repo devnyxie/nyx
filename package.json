@@ -5,8 +5,9 @@
   "main": "server/app.js",
   "type": "module",
   "scripts": {
+    "start": "cd server && node app.js",
     "dev": "npm i && cd server && node app.js",
-    "build": "cd client && npm i && npm run build && cd .. && cd server && node app.js",
+    "build": "cd client && npm i && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

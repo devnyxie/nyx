@@ -33,7 +33,7 @@ app.use(express.static('../client/dist'));
 //gzip
 app.use(compression());
 //port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 //PG DB
 const dbConfig = {
   host: process.env.DB_HOST,
