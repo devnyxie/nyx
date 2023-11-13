@@ -11,16 +11,11 @@ I thought about using Next.js initially, but switched to Express.js for its serv
 - Start Express:
     - Next, we fire up the Express.js server.
     - This server will handle the backend logic, including fetching data from various APIs and serving the necessary information to the frontend.
-
-- Pre-load Frontend:
-    - Before users even start navigating, we pre-load the frontend.
-    - This means we make sure the client-side code is ready to go, optimizing the initial loading speed for a seamless user experience.
+    - We pre-load the frontend, optimizing the initial loading speed for a seamless user experience.
 
 - Routing Logic:
-
-    - All routes lead to the frontend by default.
-    - However, for backend-required routes (like fetching data from APIs or other server-side operations), those routes are handled on the Express.js side.
-    - This setup allows us to enable redirects on the React side (react-dom-router!).
+    - All routes lead to the frontend by default except of few API routes needed for client side.
+    - This setup allows us to enable redirects on the React side (react-dom-router).
 
 ## screenshots
 Dark mode:
