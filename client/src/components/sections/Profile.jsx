@@ -90,15 +90,15 @@ function Profile() {
   }
 
   return (
-    <div className={`row g-0`}>
+    <div className={`row g-0`} id="profile">
       <div
-        className={`col col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 d-flex flex-column`}
+        className={`col col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 d-flex flex-column p-3 p-md-0`}
         style={{ height: 'min-content' }}
       >
         <img
           src={user.avatar_url}
           style={{ aspectRatio: 1 / 1 }}
-          className={`rounded-circle border-custom`}
+          className={`rounded-circle border-custom `}
         />
         <div className={`p-2`}>
           <div className={`fs-4`}>{user.name}</div>

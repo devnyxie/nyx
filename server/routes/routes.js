@@ -6,6 +6,7 @@ import {
   getGithubUsersReadme,
   getGithubUsersSocialAccounts,
 } from '../github/github_utils.js';
+import { getImgurAlbumImages } from '../imgur/imgur_utils.js';
 
 const router = express.Router();
 
@@ -51,6 +52,23 @@ router.get('/github', async (req, res) => {
         social_accounts: social_accounts,
       };
       storage.set('github', data);
+      res.json(data);
+    } else {
+      res.json(cached_res);
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/imgur', async (req, res) => {
+  try {
+    const cached_res = storage.get('imgur');
+    if (cached_res == undefined) {
+      let data = await getImgurAlbumImages();
+      data.data.reverse();
+      storage.set('imgur', data);
       res.json(data);
     } else {
       res.json(cached_res);

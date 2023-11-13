@@ -56,18 +56,15 @@ function Wrapper({ children }) {
       style={{
         height: '100vh',
         width: '100vw',
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${sierra})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
       }}
     >
-      <div className="w-100 h-100">
+      <div className="w-100 h-100 dark-theme-shadow">
         <div className="px-0 container-md pt-md-4 pb-md-4 h-100 w-100">
           <div
-            className={`main w-100 h-100 overflow-hidden visible-bg d-flex flex-column`}
-            style={{
-              backdropFilter: 'blur(12px)',
-            }}
+            className={`main w-100 h-100 overflow-hidden visible-bg d-flex flex-column backdrop-blur`}
           >
             {children}
           </div>

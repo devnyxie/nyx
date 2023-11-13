@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import NodeCache from 'node-cache';
 import cors from 'cors';
+import compression from 'compression';
 // init caching
 export const storage = new NodeCache({
   stdTTL: 86400,
@@ -29,6 +30,8 @@ var corsOptions = {
 app.use(cors(corsOptions));
 // pre-load the frontend
 app.use(express.static('../client/dist'));
+//gzip
+app.use(compression());
 //port
 const port = process.env.PORT || 3000;
 //PG DB
